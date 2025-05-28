@@ -1,54 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Marck+Script&display=swap');
 
-*{
+* {
     font-family: "Bitter", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-decoration: none;
     transition: all .2s linear;
 }
 
-$blue:#29d9d5;
-$black:#111;
-$white:#fff;
-$light-color:#aaa;
-$bg-color:#222;
-$black-bg:rgba(17,17,17,.7);
-$border:.2rem solid $blue;
+$blue: #29d9d5;
+$black: #111;
+$white: #fff;
+$light-color: #aaa;
+$bg-color: #222;
+$black-bg: rgba(17, 17, 17, .7);
+$border: .2rem solid $blue;
+
+//Estilo usado en servicios
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr)); //Crea un grid que se adapta al tamaño del contenedor.
+    gap: 2rem; //Espacio entre los elementos del grid.
+}
+
+
 
 /*
 Controlando el comportamiento de scroll.
 Aplicando una fuente más pequeña.
 Personalizando el aspecto de la barra de desplazamiento.
 Evitando que aparezca scroll lateral.*/
-html{
+html {
     font-size: 65%; //Reduce el tamaño base de fuente (útil si estás usando unidades rem para tener mejor control).
-                    //Por ejemplo, si el valor por defecto del navegador es 16px, ahora será 16px * 0.65 = 10.4px.
-    
-    overflow-x: hidden;//Oculta cualquier desplazamiento horizontal (evita barras de desplazamiento hacia los lados).
-    scroll-behavior: smooth;//→ Hace que el scroll sea suave cuando navegas con anclas (#seccion, por ejemplo).
+    //Por ejemplo, si el valor por defecto del navegador es 16px, ahora será 16px * 0.65 = 10.4px.
+
+    overflow-x: hidden; //Oculta cualquier desplazamiento horizontal (evita barras de desplazamiento hacia los lados).
+    scroll-behavior: smooth; //→ Hace que el scroll sea suave cuando navegas con anclas (#seccion, por ejemplo).
     scroll-padding-top: 9rem; //Añade espacio superior al hacer scroll con anclas, útil cuando tienes un navbar fijo (evita que se solape con el contenido).
-   
-    &::-webkit-scrollbar{ //Cambia el ancho de la barra de desplazamiento.
+
+    &::-webkit-scrollbar {
+        //Cambia el ancho de la barra de desplazamiento.
         width: 1.5rem;
     }
-    &::-webkit-scrollbar-track{//Cambia el fondo de la pista de la barra (donde se desliza el scroll).
+
+    &::-webkit-scrollbar-track {
+        //Cambia el fondo de la pista de la barra (donde se desliza el scroll).
         background: $black;
     }
-    &::-webkit-scrollbar-thumb{//Estiliza el "pulgar" del scroll (la parte que arrastras), con color azul y bordes redondeados.
+
+    &::-webkit-scrollbar-thumb {
+        //Estiliza el "pulgar" del scroll (la parte que arrastras), con color azul y bordes redondeados.
         background: $blue;
         border-radius: 1rem;
     }
 }
 
-body{
+body {
     background-color: $black;
     overflow-x: hidden; //Evita el scroll horizontal.
 }
 
-.btn{
+.btn {
     margin-top: 1rem; //Añade un margen superior
     display: inline-block;
     padding: 1rem 3rem; //Añade espacio interno al botón.
@@ -57,14 +72,15 @@ body{
     border: $border;
     border-radius: 5rem;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background: $blue; //Cambia el fondo al azul al pasar el mouse.
         color: $black; //Cambia el color del texto a blanco al pasar el mouse.
         transition: all .3s ease-in-out; //Transición suave para cambios de estilo.
     }
 }
 
-.header{
+.header {
     position: fixed; //Fija el header en la parte superior de la página.
     top: 0; //Posición en la parte superior.
     left: 0; //Posición a la izquierda.
@@ -75,11 +91,11 @@ body{
     align-items: center; //Centra verticalmente los elementos dentro del header.
     justify-content: space-between; //Espacio entre los elementos del header.
     padding: 1.5rem 9%; //Espacio interno a los lados del header.
-    //z-index: 1000; //Asegura que el header esté por encima de otros elementos.
+    z-index: 1000; //Asegura que el header esté por encima de otros elementos.
 
     .navbar a {
         font-size: 1.7rem;
-        color:$light-color;
+        color: $light-color;
         display: inline-block; //Permite que los elementos de la navbar se alineen horizontalmente.
         margin: 0 1rem;
 
@@ -89,7 +105,7 @@ body{
         }
     }
 
-    .logo{
+    .logo {
         font-family: "Marck Script", cursive; //Fuente personalizada para el logo.
         font-size: 2.5rem; //Tamaño de fuente grande para el logo.
         color: $white; //Color blanco para el texto del logo.
@@ -98,12 +114,12 @@ body{
         letter-spacing: .2rem; //Espaciado entre letras para un efecto más estilizado.
         transition: all .3s ease-in-out; //Transición suave para cambios de estilo.
 
-        &:hover{
+        &:hover {
             color: $blue; //Cambia el color al azul al pasar el mouse sobre el logo.
             transform: scale(1.1); //Escala ligeramente el logo al pasar el mouse sobre él.
         }
 
-        i{
+        i {
             color: $blue; //Color azul para el icono dentro del logo.
             font-size: 2.5rem; //Tamaño de fuente grande para el icono.
             margin-right: .5rem; //Espacio a la derecha del icono.
@@ -111,24 +127,24 @@ body{
     }
 }
 
-#main-btn{
+#main-btn {
     font-size: 2.5rem;
     color: $white;
     cursor: pointer;
     display: none; //Oculta el botón por defecto.
 }
 
-.section{
+section {
     padding: 3rem 9%; //Añade espacio interno a las secciones.
 }
 
-.home{
+.home {
     margin: 0 auto; //Centrar el contenido de la sección.
     margin-top: 9rem; //Añade margen superior para evitar que el contenido se superponga con el header.
     width: 90%;
     border-radius: 1rem;
     //background: url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat; 
-    background: linear-gradient($black-bg,$black-bg), url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat; //Fondo de la sección con una imagen de Unsplash.
+    background: linear-gradient($black-bg, $black-bg), url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat; //Fondo de la sección con una imagen de Unsplash.
     background-size: cover; //Asegura que la imagen cubra todo el fondo.
     background-position: center; //Centra la imagen de fondo.
     display: flex;
@@ -137,19 +153,22 @@ body{
     justify-content: center;
     padding-bottom: 5rem;
 
-    .content{
+    .content {
         text-align: center;
-        span{
+
+        span {
             font-weight: bolder;
             color: transparent;
             -webkit-text-stroke: .1rem $white;
             font-size: 4vw; //Tamaño de fuente grande para el texto.
         }
-        h3{
+
+        h3 {
             font-size: 2vw; //Tamaño de fuente grande para el título.
             color: $white; //Color blanco para el título.
         }
-        p{
+
+        p {
             max-width: 60rem;
             margin: 1rem auto; //Centrar el párrafo y añadir margen.
             font-size: 1.7rem; //Tamaño de fuente para el párrafo.
@@ -161,42 +180,318 @@ body{
 
 
 //Estilos para las secciones de la página About.
-.about{
+.about {
     display: flex;
     margin: 0 auto; //Centrar el contenido de la sección.
-    justify-content: center;
-    align-items: center;
     width: 90%; //Ancho máximo de la sección.
     flex-wrap: wrap; //Permite que los elementos se ajusten en varias líneas si es necesario.
     gap: 2rem; //Espacio entre los elementos.
     margin-top: 5rem;
-    .img-container{
-        flex:1 1 42rem; //Permite que la imagen ocupe el 42% del ancho disponible, con flexibilidad para crecer o encogerse.
-        
-        .img-video{
+
+    .img-container {
+        flex: 1 1 42rem; //Permite que la imagen ocupe el 42% del ancho disponible, con flexibilidad para crecer o encogerse.
+
+        .img-video {
             border-radius: 1rem;
             width: 100%; //Asegura que la imagen ocupe todo el ancho del contenedor.
         }
+
+        .controls {
+            text-align: center;
+            padding: 2rem 0;
+
+            span {
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                background: $white;
+                cursor: pointer;
+                margin: .7rem;
+
+                &.active {
+                    background: $blue; //Color azul para el botón activo.
+
+                }
+
+                &:hover {
+                    background: $blue; //Cambia el color al azul al pasar el mouse sobre los puntos de control.
+                }
+            }
+
+        }
+
     }
-    .content{
-        flex:1 1 42rem;
+    .content {
+        flex: 1 1 42rem;//E
         margin-bottom: 5rem;
 
-        span{
+
+        span {
             color: $blue;
             font-size: 2rem;
         }
-        h3{
+
+        h3 {
             color: $white;
             font-size: 4rem;
             margin-top: .5rem;
+        }
+
+        p {
+            padding: 1rem 0; //Añade espacio interno al párrafo.
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
         }
     }
 }
 
 
+//Estilos para la sección de servicios.
+
+.heading {
+    text-align: center; //Centrar el texto del encabezado.
+    margin: 5rem 0; //Añadir margen superior e inferior.
+
+    span {
+        color: $blue; //Color azul para el texto del span.
+        font-size: 2rem; //Tamaño de fuente para el span.
+    }
+
+    h2 {
+        color: $white; //Color blanco para el título.
+        font-size: 4rem; //Tamaño de fuente grande para el título.
+        //margin-top: .5rem; //Añadir margen superior al título.
+    }
+}
+
+.services {
+    .box-container {
+        @include grid(27rem);
+        margin: 0 auto;
+        width: 100%;
+        padding: 2rem 0;
+
+        .box {
+            border-radius: 2rem;
+            overflow: hidden;
+            background: $bg-color;
+            //box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform .2s;
+
+            .imagen {
+                width: 100%;
+                height: 20rem;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $bg-color;
+
+                &:hover img {
+                    transform: scale(1.1);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform .3s;
+                }
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+                text-align: center;
+
+                h3 {
+                    color: $white;
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    color: $light-color;
+                    padding: 1rem 0;
+                    font-size: 1.4rem;
+                    line-height: 2;
+                }
+
+                a {
+                    font-size: 1.7rem;
+                    color: $blue;
+
+                    &:hover i {
+                        padding-left: 1rem;
+                    }
+
+                    i {
+                        padding-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
+// Estilos PAra el Portfolio
+
+.portfolio .box-container{
+    @include grid(32rem);
+
+    .box{
+        background-color: $bg-color;
+        border-radius: 1rem;
+        padding: 3rem 2rem;
+        text-align: center;
+        border: .2rem solid $black;
+
+        &:hover{
+            border:$border;
+        }
+
+        i{
+            font-size: 4rem;
+            color: $blue;
+            margin-bottom: 1rem;
+        }
+        h3{
+            font-size: 2rem;
+            color: $white;
+        }
+        p{
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+        }
+    }
+
+}
+
+
+//Estilos para el Blog
+
+.blog .box-container{
+    //@include grid(30rem);
+    columns: 3 25rem;
+    column-gap: 1.5rem;
+
+    .box{
+        margin-bottom: 1rem;
+
+        //se usa para evitar que un elemento se divida entre columnas, páginas o regiones cuando se imprimen
+        break-inside: avoid;//No rompas esta .card a la mitad entre columnas o páginas. Mantenla entera.”
+    
+        img{
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+        span{
+            font-size: 1.4rem;
+            color: $light-color;
+        }
+        h3{
+            margin-top: .5rem;
+            font-size: 2rem;
+            color: $white;
+        }
+    }
+}
+
+
+//Estilos para el Recoment
+
+.recoment .box-container{
+    @include grid(32rem);
+
+    .box{
+        border-radius:1rem;
+        background: $bg-color;
+        overflow: hidden;
+
+        &:hover{
+            .imagen img{
+                transform: scale(1.1);
+            }
+        }
+
+        .imagen{
+            height: 25rem;
+            overflow: hidden;
+            width: 100%;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .content{
+            padding: 2rem;
+
+            .link{
+                font-size: 2rem;
+                color: $white;
+
+                &:hover{
+                    color: $blue;
+                }
+            }
+            p{
+                padding: 1rem 0;
+                font-size: 1.4rem;
+                color: $light-color;
+                line-height: 2;
+            }
+
+            .icon{
+                padding-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                a{
+                    font-size: 1.4rem;
+                    color: $light-color;
+
+                    &:hover{
+                        color: $blue;
+                    }
+
+                    i{
+                        padding-right: .5rem;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Stilos Contact
+
+.contact .box-container{
+    @include grid(25rem);
+
+    .box{
+        padding: 1rem 0;
+
+        h3{
+            font-size: 2.2rem;
+            color: $white;
+            padding: 1rem 0;
+        }
+    }
+
+}
 
 
 
@@ -213,58 +508,73 @@ body{
 
 
 //Efectos de scroll y estilos de secciones.
-@media(max-width:991px){
-    html{
+@media(max-width:991px) {
+    html {
         font-size: 60%;
     }
-    .header{
+
+    .header {
         padding: 1.5rem 2rem;
     }
-    .section{
-    padding: 3rem 2rem;
+
+    .section {
+        padding: 3rem 2rem;
     }
 
 }
-@media(max-width:770px){
-    #main-btn{
+
+@media(max-width:770px) {
+    #main-btn {
         display: inline-block;
     }
-    .header{
-        .navbar{
+
+    .header {
+        .navbar {
             position: absolute; //Cambia la posición de la navbar a absoluta para que se superponga al contenido.
             background-color: $bg-color;
-            top:99%; left: 0; right: 0;
+            top: 99%;
+            left: 0;
+            right: 0;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); //Crea un efecto de clip para la navbar.
 
-            &.active{
+            &.active {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //Muestra la navbar al hacer clic en el botón.
-                
+
             }
-            a{
+
+            a {
                 margin: 2rem;
                 font-size: 2rem; //Aumenta el tamaño de fuente de los enlaces en la navbar.
                 display: block;
             }
         }
     }
-    .home{
+
+    .home {
         margin-top: 10rem; //Aumenta el margen superior para evitar superposición con el header.
-        .content{
-            span{
+
+        .content {
+            span {
                 font-size: 8vw; //Aumenta el tamaño de fuente del span.
             }
-            h3{
+
+            h3 {
                 font-size: 8vw; //Aumenta el tamaño de fuente del título.
             }
-            p{
+
+            p {
                 font-size: 2rem; //Aumenta el tamaño de fuente del párrafo.
             }
         }
     }
 }
-@media(max-width:450px){
-    html{
+
+@media(max-width:450px) {
+    html {
         font-size: 55%;
     }
-}
 
+    .about .content h3 {
+        font-size: 3.5rem;
+    }
+}
