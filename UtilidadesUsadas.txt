@@ -1,0 +1,71 @@
+font awesome cdn link:
+https://cdnjs.com/libraries/font-awesome
+
+google fonts:
+https://fonts.google.com/specimen/Nunito?query=poppins
+
+clip-path generator: Para la forma que quisieramos
+https://bennettfeely.com/clippy/
+
+border-radius genrator:
+https://9elements.github.io/fancy-border-radius/
+
+Dibujos para la pagina svg
+https://storyset.com/
+
+Imagenes gifs
+https://pixabay.com/
+
+iconos
+https://www.flaticon.com/
+
+Modo de Instalar sass 
+Recuerda que en el html simpre debe estar <link rel="stylesheet" href="css/style.css">
+xq los navegadores no entienden el scss
+
+Instalar el Sass
+npm install -g sass -> Esto instalar sass globalmente en el sistema
+
+Otra forma de instalar sass localmente en este proyecto en el cmd ejecutar estos comandos en la carpeta del proyecto
+1. Inicia tu proyecto Node (si aún no lo has hecho)
+    npm init -y
+Esto creará un archivo package.json que es donde se registrarán las dependencias del proyecto.
+
+2. Instala Sass de forma local
+    npm install sass --save-dev
+Esto instalará Sass en la carpeta node_modules/ y lo agregará a devDependencies en tu package.json.
+
+3. Usa Sass desde npx o scripts de npm
+Ahora puedes ejecutar Sass con:
+    npx sass css/style.scss css/style.css
+npx ejecuta binarios de node_modules/.bin/ sin necesidad de instalar nada globalmente.
+
+📝 Opcional: Agrega un script a tu package.json
+Puedes agregar un script para compilar más fácil:
+    "scripts": {
+        "build-css": "sass css/style.scss css/style.css",
+        "watch-css": "sass --watch css/style.scss:css/style.css"
+    }
+
+Y luego simplemente puedes ejecutar:
+    npm run build-css
+
+O para compilar automáticamente al guardar:
+    npm run watch-css
+
+
+Ahora para compilar el SCSS a css
+debemos usar el comando
+    npx sass css/style.scss css/style.css
+
+O en modo automático (recomendado mientras editas):
+    npx sass --watch css/style.scss:css/style.css
+
+No borrar style.css, pero puede estar vacío al principio
+Sass lo va a llenar automáticamente al compilar.
+
+🚀 Flujo de trabajo recomendado
+    - Escribe todos tus estilos en style.scss.
+    - Deja que Sass compile y genere style.css.
+    - Nunca modifiques directamente style.css.
+    - Siempre enlaza style.css en tu HTML.
