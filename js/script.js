@@ -13,10 +13,10 @@ document.querySelectorAll('.about .img-container .controls .control-btn').forEac
         //Cambia la imagen principal dentro de .about .img-container para que tenga el src del botón.
         document.querySelector('.about .img-container img').src=src;
 
-        //Agrega la clase active al botón que se ha hecho clic y elimina la clase active de los demás botones.
-        document.querySelectorAll('.about .img-container .controls .control-btn').forEach(btn=>{
-            btn.classList.remove('active');
-        });
-        btn.classList.add('active');
+        // //Agrega la clase active al botón que se ha hecho clic y elimina la clase active de los demás botones.
+        // document.querySelectorAll('.about .img-container .controls .control-btn').forEach(btn=>{
+        //     btn.classList.remove('active');
+        // });
+        // btn.classList.add('active');
     }
 })

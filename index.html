@@ -8,43 +8,65 @@
     <!-- https://fontawesome.com -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- Estilos de animacion y alfinal del body el js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
     <link rel="stylesheet" href="css/style.css">
-
+    
 </head>
 
 <body>
     <header class="header">
         <div id="main-btn" class="fas fa-bars"></div>
-        <a href="#" class="logo"><i class="fas fa-paper-plane"></i>SPT</a>
+        <a data-aos="zoom-in-left" data-aos-delay="150" href="#home" class="logo"><i class="fas fa-paper-plane"></i>SPT</a>
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#blog">Blog</a>
-            <a href="#recoment">Recoments/a>
-            <a href="#contact">Contact</a>
+            <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">Home</a>
+            <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">About</a>
+            <a data-aos="zoom-in-left" data-aos-delay="600" href="#services">Services</a>
+            <a data-aos="zoom-in-left" data-aos-delay="750" href="#portfolio">Portfolio</a>
+            <a data-aos="zoom-in-left" data-aos-delay="900" href="#blog">Blog</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1050" href="#recoment">Recoments</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1200" href="#contact">Contact</a>
         </nav>
 
-        <a href="#book-form" class="btn">Book</a>
-
+        <a data-aos="zoom-in-left" data-aos-delay="1300"href="#book-form" class="btn">Book Now</a>
 
     </header>
+
     <!-- Home Section -->
 
-    <section class="home" id="Home">
+    <section class="home" id="home">
         <div class="content">
-            <span>Elder Omar Polo Arce</span>
-            <h3>Welcome to SPT</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <a href="#book-form" class="btn">Book Now</a>
+            <span data-aos="fade-up" data-aos-delay="150">Elder Omar Polo Arce</span>
+            <h3 data-aos="fade-up" data-aos-delay="300">Welcome to SPT</h3>
+            <p data-aos="fade-up" data-aos-delay="450">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn">Book Now</a>
         </div>
+    </section>
 
+    <!-- Book-Form section -->
+
+    <section class="book-form" id="book-form">
+        <form action="">
+            <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+                <span>Where to?</span>
+                <input type="text" name="" id="" placeholder="place name">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+                <span>When?</span>
+                <input type="date" name="" id="" placeholder="place name">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+                <span>How many?</span>
+                <input type="number" name="" id="" placeholder="place name">
+            </div>
+            <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn">
+        </form>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="img-container">
+        <div class="img-container" data-aos=fade-right data-aos-delay="300">
             <!-- <video src="video/video.mp4" loop autoplay muted class="video"></video> -->
             <img src="/img/JackSparrow.png" alt="" class="img-video">
             <div class="controls">
@@ -54,11 +76,11 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content" data-aos=fade-left data-aos-delay="600">
             <span>Why choose me?</span>
             <h3>About Us</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+
             <a href="#" class="btn">read more</a>
 
         </div>
@@ -68,12 +90,12 @@
     <section class="services" id="services">
         <div class="heading">
             <span>What I do?</span>
-            <h3>My Services</h3>
+            <h1>My Services</h1>
         </div>
         <div class="box-container">
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
                 <div class="imagen">
-                    <img src="img/img-service1.jpg" alt="Imagen de servicio 1">
+                    <img src="img/img-service1_batcheditor_fotor.png" alt="Imagen de servicio 1">
                 </div>
                 <div class="content">
                     <h3>Service 1</h3>
@@ -81,9 +103,9 @@
                     <a href="#">Read More<i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
                 <div class="imagen">
-                    <img src="img/img-service1_batcheditor_fotor.png" alt="Imagen de servicio 2">
+                    <img src="img/img-service2.jpg" alt="Imagen de servicio 2">
                 </div>
                 <div class="content">
                     <h3>Service 2</h3>
@@ -91,9 +113,9 @@
                     <a href="#">Read More<i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
                 <div class="imagen">
-                    <img src="img/img-service2.jpg" alt="Imagen de servicio 3">
+                    <img src="img/img-service1_batcheditor_fotor.png" alt="Imagen de servicio 3">
                 </div>
                 <div class="content">
                     <h3>Service 3</h3>
@@ -101,7 +123,7 @@
                     <a href="#">Read More<i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
                 <div class="imagen">
                     <img src="img/img-service3.jpg" alt="Imagen de servicio 4">
                 </div>
@@ -111,9 +133,19 @@
                     <a href="#">Read More<i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="750">
                 <div class="imagen">
                     <img src="img/img-service4.jpg" alt="Imagen de servicio 5">
+                </div>
+                <div class="content">
+                    <h3>Service 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <a href="#">Read More<i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="900">
+                <div class="imagen">
+                    <img src="img/img-service5.jpg" alt="Imagen de servicio 5">
                 </div>
                 <div class="content">
                     <h3>Service 5</h3>
@@ -133,37 +165,44 @@
             <h1>Software</h1>
         </div>
         <div class="box-container">
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
                 <i class="fas fa-globe"></i>
                 <h3>HTML, CSS, JS, TS, PHP</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
                     ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
                     Laudantium, error doloribus!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
                 <i class="fas fa-hiking"></i>
                 <h3>REACT, NEXT.js, Vue</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
                     ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
                     Laudantium, error doloribus!</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
                 <i class="fas fa-utensils"></i>
                 <h3>MySQL, Postgers,mongoDB</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
                     ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
                     Laudantium, error doloribus!</p>
             </div>
-            <div class="box">
-                <i class="fas fa-globe"></i>
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+                <i class="fas fa-wallet"></i>
                 <h3>Docker, git,</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
                     ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
                     Laudantium, error doloribus!</p>
             </div>
-            <div class="box">
-                <i class="fas fa-hotels"></i>
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+                <i class="fas fa-globe"></i>
                 <h3>Node.js, Express, Laravel</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
+                    ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
+                    Laudantium, error doloribus!</p>
+            </div>
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+                <i class="fas fa-globe"></i>
+                <h3>Buena Persona</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae nulla, esse error voluptas
                     ullam voluptatem ab, nostrum porro unde ut, voluptatibus doloremque labore provident fugiat optio.
                     Laudantium, error doloribus!</p>
@@ -181,42 +220,106 @@
             <h1>Todos mis pasatiempos</h1>
         </div>
         <div class="box-container">
-            <div class="box">
-                <img src="img/img-service1.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="img/goku-faces-shenron-an-3840x2160.jpg" alt="">
                 <span>Deportes</span>
                 <h3>Futbol, Futsal, Voleybol, Wally, Raquetboll</h3>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
                 <img src="img/wallpaperflare.com_wallpaper.jpg" alt="">
                 <span>pasatiempos</span>
                 <h3>Jugar Videojuegos</h3>
             </div>
-            <div class="box">
-                <img src="img/img-service3.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <img src="img/ai-generated-7832123_640.jpg" alt="">
                 <span>Relajacion</span>
                 <h3>Escuchar Musica</h3>
             </div>
-            <div class="box">
-                <img src="img/img-service4.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="img/JackSparrow.png" alt="">
                 <span>Familia</span>
                 <h3>Viajar con mi Familia</h3>
             </div>
-            <div class="box">
-                <img src="img/img-service5.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="img/img-service2.jpg" alt="">
                 <span>Conocimientos</span>
                 <h3>Aprender mas sobre programacion</h3>
             </div>
-            <div class="box">
-                <img src="img/goku-faces-shenron-an-3840x2160.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <img src="img/img-service3.jpg" alt="">
                 <span>Estudios</span>
                 <h3>En la USFXCH</h3>
             </div>
-            <div class="box">
-                <img src="img/img-service2.jpg" alt="">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="img/img-service4.jpg" alt="">
+                <span>Estudios</span>
+                <h3>En la USFXCH</h3>
+            </div>
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="img/img-service5.jpg" alt="">
+                <span>Estudios</span>
+                <h3>En la USFXCH</h3>
+            </div>
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <img src="img/Grafiti Muro.png" alt="">
                 <span>Estudios</span>
                 <h3>En la USFXCH</h3>
             </div>
         </div>
+    </section>
+
+    <!-- Seccion de Review -->
+
+    <section class="review">
+        <div class="content" data-aos=fade-right data-aos-delay="300">
+            <span> Testimonials</span>
+            <h3>Good News</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sint quasi perspiciatis nemo! Impedit voluptate temporibus, corporis reprehenderit harum cupiditate sequi autem similique, incidunt, non est. Debitis itaque commodi rem.</p>
+        </div>
+
+        <div class="box-container" data-aos=fade-left data-aos-delay="400">
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet consectetur i animi assumenda amet illum optio ullam quidem exercitationem maiores! Alias, aliquam in.</p>
+                <div class="user">
+                    <img src="img/ai-generated-7832123_640.jpg" alt="">
+                    <div class="info">
+                        <h3>Jhon Connor</h3>
+                        <span>Designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet consectetur a Reprehenderit qui animi assumenda amet illum optes! Alias, aliquam in.</p>
+                <div class="user">
+                    <img src="img/ai-generated-7832123_640.jpg" alt="">
+                    <div class="info">
+                        <h3>Jhon Connor</h3>
+                        <span>Designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolorugit repellendus repudiandae. Reprehenderit rcitationem maiores! Alias, aliquam in.</p>
+                <div class="user">
+                    <img src="img/ai-generated-7832123_640.jpg" alt="">
+                    <div class="info">
+                        <h3>Jhon Connor</h3>
+                        <span>Software</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Lorem ipsum rit qui animi assumenda amet illum optio ullam xercitationem maiores! Alias, aliquam in.</p>
+                <div class="user">
+                    <img src="img/ai-generated-7832123_640.jpg" alt="">
+                    <div class="info">
+                        <h3>Jhon Connor</h3>
+                        <span>Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- Seccion de Recomendaciones -->
@@ -227,12 +330,12 @@
             <h1>Ingeniero de Sistemas</h1>
         </div>
         <div class="box-container">
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
                 <div class="imagen">
                     <img src="img/JackSparrow.png" alt="">
                 </div>
                 <div class="content">
-                    <a href="">Link</a>
+                    <a href="" class="link">La vida es solo una</a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, at odio pariatur est ratione
                         voluptatem quos, necessitatibus hic delectus ut odit dolore mollitia fugiat doloribus debitis
                         incidunt aperiam, quisquam ex!</p>
@@ -243,12 +346,12 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
                 <div class="imagen">
                     <img src="img/Grafiti Muro.png" alt="">
                 </div>
                 <div class="content">
-                    <a href="">Link</a>
+                    <a href="" class="link">Disfruta cada dia</a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, at odio pariatur est ratione
                         voluptatem quos, necessitatibus hic delectus ut odit dolore mollitia fugiat doloribus debitis
                         incidunt aperiam, quisquam ex!</p>
@@ -259,12 +362,12 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
                 <div class="imagen">
                     <img src="img/Grafiti Barrio.png" alt="">
                 </div>
                 <div class="content">
-                    <a href="">Link</a>
+                    <a href="" class="link">Mente autodidacta</a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, at odio pariatur est ratione
                         voluptatem quos, necessitatibus hic delectus ut odit dolore mollitia fugiat doloribus debitis
                         incidunt aperiam, quisquam ex!</p>
@@ -279,11 +382,21 @@
 
     </section>
 
+    <!-- banner Section -->
+
+    <div class="banner">
+        <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+            <span>USFXCH</span>
+            <h3>Desarrollo Web EOPA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure dolore rem, nihil ducimus tempora consequatur.</p>
+            <a href="#book-form" class="btn">This is the Banner</a>
+        </div>
+    </div>
     <!-- Footer Contact Seccion -->
 
     <section class="contact" id="contact">
         <div class="box-container">
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
                 <a href="" class="logo"><i class="fas fa-paper-plane"></i>SPT</a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus provident natus placeat, culpa voluptatibus neque suscipit aut? Ducimus, explicabo rerum.</p>
                 <div class="share">
@@ -293,24 +406,25 @@
                     <a href="" class="fab fa-linkedin"></a>
                 </div>
             </div>
-            <div class="box">
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> Home</a>
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> About</a>
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> Services</a>
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> Protfolio</a>
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> Blog</a>
-                <a href="" class="links"><i class="fas fa-arrow-right"></i> Recomments</a>
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <h3>Quick links</h3>
+                <a href="#home" class="links"><i class="fas fa-arrow-right"></i> Home</a>
+                <a href="#about" class="links"><i class="fas fa-arrow-right"></i> About</a>
+                <a href="#services" class="links"><i class="fas fa-arrow-right"></i> Services</a>
+                <a href="#portfolio" class="links"><i class="fas fa-arrow-right"></i> Portfolio</a>
+                <a href="#blog" class="links"><i class="fas fa-arrow-right"></i> Blog</a>
+                <a href="#recomments" class="links"><i class="fas fa-arrow-right"></i> Recomments</a>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
                 <h3>Contact Info</h3>
                 <p><i class="fas fa-map"></i>Sucre, Bolivia</p>
-                <p><i class="fas fa-phone"></i>78664324</p>
-                <p><i class="fas fa-envelope"></i>omarpol.bo@gmail.com</p>
+                <p><i class="fas fa-phone"></i>123456789</p>
+                <p><i class="fas fa-envelope"></i>omar@gmail.com</p>
                 <p><i class="fas fa-clock"></i>9:00 - 20:00</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
                 <h3>Contact for message</h3>
                 <p>Ingeniero de Sistemas - USFXCH - Bolivia</p>
                 <form action="">
@@ -320,10 +434,16 @@
             </div>
         </div>
     </section>
-
-
-
-
+    <div class="credit">Created by <span>Elder Omar Polo Arce</span>!!</div>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:800,
+            offset:150,
+            // once:true,
+        });
+    </script>
     <script src="./js/script.js"></script>
 </body>
 
